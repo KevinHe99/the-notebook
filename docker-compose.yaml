@@ -1,0 +1,19 @@
+services:
+  backend:
+    container_name: backend
+    build: ./backend/
+
+    networks:
+      - my_network
+    expose:
+      - "8120"
+    ports:
+      - "8120:8120"
+
+
+
+
+
+
+networks:
+  my_network:
