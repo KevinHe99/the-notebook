@@ -18,6 +18,7 @@ public class NoteController {
     private NoteService noteService;
 
     // Read: all notes
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public ResponseEntity<List<Note>> getAllNotes() {
         return ResponseEntity.ok(noteService.getAllNotes());
